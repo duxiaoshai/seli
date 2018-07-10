@@ -1,0 +1,75 @@
+{
+    "total": 10,
+    "result": [
+        {
+			"url": "view1.html",
+            "image": "img/DSC_5093-ok.jpg",
+            "genre": "新年手账本",
+            "title": "笔记本",
+            "maximg": "img/DSC_5093.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/DSC_6557-ok.jpg",
+            "genre": "口红盒",
+            "title": "YSL EC 四只装口红盒 断货王",
+            "maximg": "img/DSC_6557-ok.jpg"
+        },
+		{
+			"url": "view2.html",
+            "image": "img/DSC_6981.jpg",
+            "genre": "男士插座",
+            "title": "碧欧泉2018多功能插头-黑色",
+            "maximg": "img/DSC_6981.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_7.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅  DSC",
+            "maximg": "img/img_7_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_8.jpg",
+            "genre": "手提包",
+            "title": "颈部按摩器  DSC",
+            "maximg": "img/img_8_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_9.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_9_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_10.jpg",
+            "genre": "手提包",
+            "title": "口红盒  DSC",
+            "maximg": "img/img_10_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_11.jpg",
+            "genre": "手提包",
+            "title": "DSC",
+            "maximg": "img/img_11_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_12.jpg",
+            "genre": "手提包",
+            "title": "帆布包-科莱丽-005",
+            "maximg": "img/img_12_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_13.jpg",
+            "genre": "手提包",
+            "title": "吹风机",
+            "maximg": "img/img_13_max.jpg"
+        }
+    ]
+}

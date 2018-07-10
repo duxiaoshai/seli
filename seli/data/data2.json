@@ -1,0 +1,75 @@
+{
+    "total": 10,
+    "result": [
+        {
+			"url": "view.html",
+            "image": "img/img_14.jpg",
+            "genre": "手提包",
+            "title": "吹风机",
+            "maximg": "img/img_14_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_15.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_15_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_16.jpg",
+            "genre": "手提包",
+            "title": "帆布包-科莱丽-005",
+            "maximg": "img/img_16_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_17.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_17_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_18.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_18_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_19.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_19_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_20.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_20_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_4.jpg",
+            "genre": "手提包",
+            "title": "标题一",
+            "maximg": "img/img_4_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_5.jpg",
+            "genre": "手提包",
+            "title": "标题二",
+            "maximg": "img/img_5_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_6.jpg",
+            "genre": "手提包",
+            "title": "标题三",
+            "maximg": "img/img_6_max.jpg"
+        }
+    ]
+}

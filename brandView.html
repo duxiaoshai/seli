@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="seli" />
+<meta name="keyword" content="seli" />
+<title>seli</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/animation.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+   	<!-- Head -->
+    	<div class="brandTitle boxSizing">details</div>
+        
+    
+    <!-- content -->
+        <div class="mainBox">
+        
+            <div id="productList"></div>
+                
+			<script type="text/x-handlebars-template" id="waterfall-tpl">
+                {{#result}}
+                    <div class="productBox productList">
+                         <div class="productImg">
+                            <a href="{{url}}" class="imageBox"><img src="{{image}}" width="276" /></a>
+                            <a href="javascript:;" class="collection transition">
+								<span class="loveBox">
+									<span class="love"></span>
+									<span class="water"></span>
+								</span>
+							</a>
+                            <a href="javascript:;" class="enlarge transition" maxsrc="{{maximg}}"></a>
+                         </div>
+                         <div class="productText">
+                            <h3 class="fw"><a href="{{url}}">{{genre}}</a></h3>
+                            <h2><a href="{{url}}">{{title}}</a></h2>
+                        </div>
+                    </div>
+                {{/result}}
+            </script>
+            
+            <div id="waterfall-message"></div>
+            <div id="waterfall-loading"><img src="images/loading.gif" />加载中...</div>    
+            
+    	</div>
+    
+    
+    <!-- footer -->
+    	
+    	<footer id="footer">
+        	<p><a href="index.html" class="logo">seli</a></p>
+        	<span class="phone">86-021-6174-0635</span>
+        	<span class="mail">seli@top-line.net.cn</span>
+            <span>沪ICP备09001221号</span>
+            <span>沪公网安备11010802017116</span>
+        </footer>
+        
+        
+        <!-- 大图 -->
+            <div class="maxImgBox brandMaxImg">
+                <div class="listMaxImg">
+                    <img src="" />
+                </div>
+            </div>
+    
+    
+	<!-- Script -->
+        <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/handlebars.js"></script>
+        <script type="text/javascript" src="js/waterfall.js"></script>
+        <script type="text/javascript" src="js/fancySelect.js"></script>
+        <script>
+			
+			$(function(){
+				
+				$('#productList').waterfall({
+					itemCls: 'productBox',
+					colWidth: 296,  
+					gutterWidth: 10,
+					gutterHeight: 10,
+					minCol: 3,
+					maxCol: 5,
+					//maxPage: 5,
+					fitWidth: true,
+					checkImagesLoaded: false,
+					callbacks: {
+						
+						loadingFinished: function($loading, isBeyondMaxPage) {
+							if ( !isBeyondMaxPage ) {
+								$loading.fadeOut();
+							} else {
+								$loading.hide();
+								$('#page-navigation').show();
+							}
+						},
+						renderData: function (data, dataType) {
+							var tpl,
+								template,
+								resultNum = data.total;
+								
+							if ( resultNum < 10) {
+								$('#productList').waterfall('pause', function() {
+									$('#waterfall-message').html('- END -')
+								});
+							}
+					
+							if ( dataType === 'json' ||  dataType === 'jsonp'  ) { // json or jsonp format
+								tpl = $('#waterfall-tpl').html();
+								template = Handlebars.compile(tpl);
+					
+								return template(data);
+							} else { // html format
+								return data;
+							}
+						}
+					},
+					path: function(page) {
+						return 'data/data' + page + '.json';
+					}
+				});
+				
+				//点击收藏
+				$('.collection').live("click", function(){
+					$(this).toggleClass('current');
+				})
+				
+				//大图
+				var sTopImg;
+				$('.enlarge').live("click", function(){ //点击小图出大图
+					sTopImg = $(window).scrollTop(); //1700是最高图片尺寸
+					var imgSrc = $(this).attr('maxsrc');
+					$('.listMaxImg').children('img').attr( 'src', imgSrc+ '?t='+ Date.parse(new Date()) ); //写入大图路径
+					
+					
+					$('.maxImgBox').toggle(); //显示大图弹层
+					if( sTopImg+1700 >= $(document).height() ){  //判断点击的是否是最后一页图片
+						$('.listMaxImg').css({
+							'top' : 'auto',
+							'bottom' : 0
+							});
+					} else {
+						$('.listMaxImg').css( 'top', sTopImg );
+					}
+					$('.maxImgBox').height( $(document).height()-70 ); //设置大图弹层高度
+					$(window).scroll(function(){
+						$('.maxImgBox').height( $(document).height()-70 ); //设置大图弹层高度
+					})
+					$('.maxImgBox').click(function(){ //隐藏大图
+						$(this).hide();
+					})
+				})
+				
+				
+				$(document).bind("click touchend", function(e){ //点击任意处关闭注册弹层
+					if( $(e.target).closest('.pbBoxJs').length > 0 ){
+						$('.popupBox').css('visibility', 'visible');
+					} else {
+						$('.popupBox, .pbBoxJs').css('visibility', 'hidden');
+					}
+					e.stopPropagation();
+				})
+				
+			})
+			
+			
+		</script>
+		
+        
+</body>
+</html>

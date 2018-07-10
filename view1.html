@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="seli" />
+<meta name="keyword" content="seli" />
+<title>seli</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/animation.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+   	<!-- Head -->
+    	<header id="header">
+        	
+            <div class="clearfix relative">
+            	
+                <h1 class="headH1"><a href="index.html" class="logo">seli</a></h1>
+                
+                <div class="headInput"><input type="text" placeholder="search" class="boxSizing" /></div>
+                
+                <div class="clearfix headRight">
+                    <a href="javascript:;" class="search">screen</a>
+                    <a href="javascript:;" class="genre"><span></span></a>
+                    <a href="javascript:;" class="about"></a>
+                    <a href="javascript:;" class="user"></a>
+                </div>
+                
+            </div>
+            
+        </header>
+        
+    
+    <!-- content -->
+        <div class="mainBox">
+        	<p class="pagePosition">
+            	<a href="index.html">首页</a><span></span>
+                <a href="#">一级分类</a><span></span>
+                <a href="#">二级分类</a><span></span>
+                口红盒
+            </p>
+            
+            <div class="clearfix viewBox">
+            
+            	<!-- 图片轮播 -->
+                	<div class="relative viewSlide">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <p class="viewImgP"><span viewMaxImg="img/DSC_5093.jpg"><img src="img/DSC_5093-ok.jpg" /></span></p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p class="viewImgP"><span viewMaxImg="img/DSC_5088.jpg"><img src="img/DSC_7593.jpg" /></span></p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p class="viewImgP"><span viewMaxImg="img/DSC_7600.jpg"><img src="img/DSC_7600.jpg" /></span></p>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <p class="viewImgP"><span viewMaxImg="img/DSC_5096.jpg"><img src="img/DSC_5096.jpg" /></span></p>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="viewMaxImg"></div>
+                    </div>
+            	
+                <!-- 产品信息 -->
+                	<div class="viewRight">
+                    	<h2 class="viewH2">新年手账本</h2>
+                        <p>
+                        	<a href="javascript:;" class="viewCollection transition">
+                            	<span class="loveBox">
+									<span class="love"></span>
+									<span class="water"></span>
+								</span>
+                            </a>
+                        </p>
+                        <ul class="viewUl">
+                        	<li>
+                            	<p>品类：笔记本</p>
+                                <p>品牌：R&G</p>
+                            </li>
+                        	<li>
+                            	<p>材质：画刊纸</p>
+                                <p>尺寸：11.7*1.7*16.5CM</p>
+                                <p>规格：大号</p>
+                            </li>
+                        	<li>
+                            	<p>单价：￥23</p>
+                                <p>数量：3000-3900</p>
+                            </li>
+                        	<li>
+                            	<p>起订数量：</p>
+                                <p>单价：</p>
+                            </li>
+                        </ul>
+                        <p class="viewHelp">需要帮助吗？:<span class="viewPhone">+44 (0) 20 7229 4848</span><span class="viewEmail">support@wolfandbadger.com</span></p>
+                    </div>
+            	
+            </div>
+            
+            <div class="viewSimilar"><span></span>相似推荐</div>
+            
+            <div id="productList"></div>
+                
+			<script type="text/x-handlebars-template" id="waterfall-tpl">
+                {{#result}}
+                    <div class="productBox productList">
+                         <div class="productImg">
+                            <a href="{{url}}" class="imageBox"><img src="{{image}}" width="276" /></a>
+                            <a href="javascript:;" class="collection transition">
+								<span class="loveBox">
+									<span class="love"></span>
+									<span class="water"></span>
+								</span>
+							</a>
+                            <a href="javascript:;" class="enlarge transition" maxsrc="{{maximg}}"></a>
+                         </div>
+                         <div class="productText">
+                            <h3 class="fw"><a href="{{url}}">{{genre}}</a></h3>
+                            <h2><a href="{{url}}">{{title}}</a></h2>
+                        </div>
+                    </div>
+                {{/result}}
+            </script>
+            
+            <div id="waterfall-message"></div>
+            <div id="waterfall-loading"><img src="images/loading.gif" />加载中...</div>    
+            
+    	</div>
+    
+    
+    <!-- footer -->
+    	
+    	<footer id="footer">
+        	<p><a href="index.html" class="logo">seli</a></p>
+        	<span class="phone">86-021-6174-0635</span>
+        	<span class="mail">seli@top-line.net.cn</span>
+            <span>沪ICP备09001221号</span>
+            <span>沪公网安备11010802017116</span>
+        </footer>
+        
+        
+    <!-- 弹出框 -->
+    	<div class="popupBox">
+        
+        	<!-- 搜索 -->
+            	<div class="pbBoxJs pbSearch">
+                	<span class="spanjiao"></span>
+                    
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox">
+                            <form method="post">
+                            <ul class="pbSearchUl">
+                                <li>
+                                    <p>价格</p>
+                                    <div class="clearfix mt10">
+                                        <div class="divInput"><span>¥</span><input type="text" value="" class="boxSizing" /></div>
+                                        <span class="qujian"><img src="images/qujian.gif" /></span>
+                                        <div class="divInput"><span>¥</span><input type="text" value="" class="boxSizing" /></div>
+                                    </div>
+                                    <div class="selectDiv">
+                                        <select name="" class="select">
+                                            <option>All Prices</option>
+                                            <option>¥0.00—10.00</option>
+                                            <option>¥10.00—20.00</option>
+                                            <option>¥20.00—40.00</option>
+                                            <option>¥40.00—60.00</option>
+                                            <option>¥60.00—80.00</option>
+                                            <option>¥80.00—100.00</option>
+                                            <option>¥100.00以上</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>品牌</p>
+                                    <div class="selectDiv">
+                                        <select name="" class="select">
+                                            <option>All Brands</option>
+                                            <option>科颜氏</option>
+                                            <option>科莱丽</option>
+                                            <option>欧莱雅</option>
+                                            <option>碧欧泉</option>
+                                            <option>科莱丽</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>年份</p>
+                                    <div class="selectDiv">
+                                        <select name="" class="select">
+                                            <option>All Year</option>
+                                            <option>2017—2018</option>
+                                            <option>2016-2017</option>
+                                            <option>2015-2016</option>
+                                            <option>2014-2015</option>
+                                            <option>2013-2014</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="button" value="确定" class="pbSearchBtn" />
+                                    <p class="mt10 tc"><a href="javascript:;" class="resetBtn">清空筛选条件</a></p>
+                                </li>
+                            </ul>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            <!-- 分类 -->
+            	<div class="pbBoxJs pbGener">
+                	
+                    <span class="spanjiao"></span>
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox boxSizing">
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">家用电器</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">个护健康</a>
+                                    <a href="#">生活电器</a>
+                                    <a href="#">厨房小电</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">数码</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">智能设备</a>
+                                    <a href="#">影音娱乐</a>
+                                    <a href="#">手机配件</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">办公</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">文具耗材</a>
+                                    <a href="#">办公设备</a>
+                                    <a href="#">外设产品</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">配饰</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">麦子套装</a>
+                                    <a href="#">手套</a>
+                                    <a href="#">围巾</a>
+                                    <a href="#">钥匙扣</a>
+                                    <a href="#">袖口</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">箱包</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">功能箱包</a>
+                                    <a href="#">精品男包</a>
+                                    <a href="#">潮流女包</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">配件</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">配件</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">运动</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">户外装备</a>
+                                    <a href="#">健身训练</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">汽车用品</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">车载电器</a>
+                                    <a href="#">汽车装饰</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">寝居服饰</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">配件</a>
+                                </dd>
+                            </dl>
+                    	</div>
+                    </div>
+                    
+                </div>
+                
+            <!-- 个人中心 -->
+            	<div class="pbBoxJs pbUser">
+                	
+                    <span class="spanjiao"></span>
+                    
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox">
+                            <div class="userName">
+                                <div class="clearfix">
+                                    <div class="portrait"><img src="images/user_1.png" height="88" width="88" /></div>
+                                    <div class="userNameRight">
+                                        admin@loreal.com
+                                        <p><a href="javascript:;">Exit</a></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix userTab">
+                                    <a href="javascript:;" class="boxSizing current">足迹</a>
+                                    <a href="javascript:;" class="boxSizing">收藏</a>
+                                </div>
+                            </div>
+                        
+                        <!-- 足迹 -->
+                            <div class="userTabBox">
+                            
+                                <dl class="scrollDl">
+                                                            
+                                    <dt class="clearfix scrollDt">
+                                        <span>TODAY</span>
+                                        <a href="javascript:;" class="delete">清空</a>
+                                        <a href="javascript:;" class="sure">sure</a>
+                                    </dt>
+                                    
+                                    <dd class="scrollDd">
+                                        <ul>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" /></a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl class="scrollDl">
+                                                            
+                                    <dt class="clearfix scrollDt">
+                                        <span>HISTORY</span>
+                                        <a href="javascript:;" class="delete">清空</a>
+                                        <a href="javascript:;" class="sure">sure</a>
+                                    </dt>
+                                    
+                                    <dd class="scrollDd">
+                                        <ul>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                        </ul>
+                                    </dd>
+                                    
+                                </dl>
+                                
+                            </div>
+                        
+                        <!-- 收藏 -->
+                            <div class="userTabBox" style="display:none;">
+                            
+                                <dl class="scrollDl">
+                                                            
+                                    <dt class="clearfix scrollDt">
+                                        <span>COLLECT</span>
+                                        <a href="javascript:;" class="delete">清空</a>
+                                        <a href="javascript:;" class="sure">sure</a>
+                                    </dt>
+                                    
+                                    <dd class="scrollDd">
+                                        <ul>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt class="listEnd">-END-</dt>
+                                </dl>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            <!-- 关于我们 -->
+            	<div class="pbBoxJs pbAbout">
+                	
+                    <span class="spanjiao"></span>
+                    
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox boxSizing">
+                            <div class="pbAboutTitle clearfix">
+                                <span class="pbAboutTitleSpan">about seli</span>
+                                <div class="pbAboutBtn"><a href="#">Available</a><img src="images/erweima.gif" /></div>
+                            </div>
+                            
+                            <div class="pbAboutMessage">
+                                <p>上海思莉工贸有限公司是中国礼品服务的领导品牌，我们为众多世界级企业提供了礼品解决方案，为众多知名品牌量身定制创意礼品赠品，实现其品牌产品的营销增值，我们还广泛服务于奢侈品、航空、通讯、医药、IT、金融等行业客户。</p>
+                                <p>&nbsp;</p>
+                                <p>集团依托全球网点信息的共享、领先的设计理念、专业的全球采购团队，全力打造以创意设计、生产制造、品牌推广于一体的全方位礼品平台。</p>
+                            </div>
+                            
+                            <ul class="pbAboutAddress">
+                                <li class="address">上海市中山西路1265弄18号湘江大厦1505室</li>
+                                <li>Room 1505，Xiangjiang Building，No.18 Lane 1265，West Zhongshan Rd，Shanghai.</li>
+                            </ul>
+                            
+                            <ul class="pbAboutPhone">
+                                <li class="phoneIcon">86-021-6174-0635-601</li>
+                                <li class="mailIcon">seli@top-line.net.cn</li>
+                            </ul>
+                    	</div>
+                    </div>
+                    
+                
+                </div>
+        
+        </div>
+        
+        <!-- 大图 -->
+            <div class="maxImgBox">
+                <div class="listMaxImg">
+                    <img src="" />
+                </div>
+            </div>
+    
+    
+	<!-- Script -->
+        <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/handlebars.js"></script>
+        <script type="text/javascript" src="js/waterfall.js"></script>
+        <script type="text/javascript" src="js/fancySelect.js"></script>
+        <script language="javascript">
+			
+			$(function(){
+								
+				$('#productList').waterfall({
+					itemCls: 'productBox',
+					colWidth: 296,  
+					gutterWidth: 10,
+					gutterHeight: 10,
+					minCol: 3,
+					maxCol: 5,
+					//maxPage: 5,
+					fitWidth: true,
+					checkImagesLoaded: false,
+					callbacks: {
+						
+						loadingFinished: function($loading, isBeyondMaxPage) {
+							if ( !isBeyondMaxPage ) {
+								$loading.fadeOut();
+							} else {
+								$loading.hide();
+								$('#page-navigation').show();
+							}
+						},
+						renderData: function (data, dataType) {
+							var tpl,
+								template,
+								resultNum = data.total;
+								
+							if ( resultNum < 10) {
+								$('#productList').waterfall('pause', function() {
+									$('#waterfall-message').html('- END -')
+								});
+							}
+					
+							if ( dataType === 'json' ||  dataType === 'jsonp'  ) { // json or jsonp format
+								tpl = $('#waterfall-tpl').html();
+								template = Handlebars.compile(tpl);
+					
+								return template(data);
+							} else { // html format
+								return data;
+							}
+						}
+					},
+					path: function(page) {
+						return 'data/data' + page + '.json';
+					}
+				});
+				
+				//点击收藏
+				$('.collection, .viewCollection').live("click", function(){
+					$(this).toggleClass('current');
+				})
+			
+				//select美化
+				$('.select').fancySelect();
+				
+				
+				//清空
+				$('.delete').click(function(){
+					$(this).siblings('.sure').toggle();
+				})
+				
+				//个人中心
+				$('.userTab > a').click(function(){ //足迹、收藏
+					index = $(this).index();
+					$(this).addClass('current').siblings().removeClass('current');
+					$('.userTabBox').eq(index).show().siblings('.userTabBox').hide();
+				})
+				
+				//产品详情左边
+				var slideSpan, boxX, boxY, xx, yy, zX, zY, viewMaxImg, positionNumber;
+				var bannerS = new Swiper('.viewSlide .swiper-container',{ //图片轮播
+					effect : 'fade',
+					//calculateHeight: true,
+					paginationClickable: true,
+					speed:1000,
+					slidesPerView:1,
+					loop:true,
+					pagination:{
+					  el: '.viewSlide .swiper-pagination',
+					  clickable: true,
+					},
+					autoplay:{
+						delay:5000,
+						disableOnInteraction: false,
+					},
+					on: {
+						slideChangeTransitionStart: function(){
+							slideSpan = $('.swiper-slide-active .viewImgP span');
+							if( $(slideSpan).width() < $(slideSpan).height() ){
+								$('.viewMaxImg').removeClass('width').addClass('height');
+							} else {
+								$('.viewMaxImg').removeClass('height').addClass('width');
+							}
+							
+							boxX = slideSpan.offset().left;
+							boxY = slideSpan.offset().top;
+							slideSpan.mousemove(function(e){
+								xx = e.pageX;
+								yy = e.pageY;
+								zX = xx - boxX;
+								zY = yy - boxY;
+								viewMaxImg = $(this).attr('viewMaxImg');
+								
+								positionNumber = -zX +'px '+ -zY +'px'
+								$('.viewMaxImg').css({
+									'background-image' : 'url('+ viewMaxImg +')',
+									'background-position' : positionNumber,
+									'display' : 'block'
+									});
+							}).mouseout(function(){
+								$('.viewMaxImg').css({
+									'background-position' : '0 0',
+									'display' : 'none'
+									});
+							});
+						}
+					}
+				});
+				$('.viewSlide').hover(function(){ //鼠标悬停停止动画
+					bannerS.autoplay.stop();
+				}, function(){
+					bannerS.autoplay.start();
+				})
+				
+				//大图
+				var sTopImg;
+				$('.enlarge').live("click", function(){ //点击小图出大图
+					sTopImg = $(window).scrollTop();
+					var imgSrc = $(this).attr('maxsrc');
+					$('.listMaxImg').children('img').attr( 'src', imgSrc+ '?t='+ Date.parse(new Date()) ); //写入大图路径
+					
+					
+					$('.maxImgBox').toggle(); //显示大图弹层
+					if( sTopImg+1700 >= $(document).height() ){  //判断点击的是否是最后一页图片
+						$('.listMaxImg').css({
+							'top' : 'auto',
+							'bottom' : 0
+							});
+					} else {
+						$('.listMaxImg').css( 'top', sTopImg );
+					}
+					$('.maxImgBox').height( $(document).height()-120 ); //设置大图弹层高度
+					$(window).scroll(function(){
+						$('.maxImgBox').height( $(document).height()-120 ); //设置大图弹层高度
+					})
+					$('.maxImgBox').click(function(){ //隐藏大图
+						$(this).hide();
+					})
+				})
+				
+				//搜索、分类、个人中心、关于我们、热销、资讯、品牌
+				$('.search').click(function(e){ //搜索
+					$('.pbSearch').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.genre').click(function(e){ //分类
+					$('.pbGener').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.user').click(function(e){ //个人中心
+					$('.pbUser').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.about').click(function(e){ //关于我们
+					$('.pbAbout').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				
+				$(document).bind("click touchend", function(e){ //点击任意处关闭注册弹层
+					if( $(e.target).closest('.pbBoxJs').length > 0 ){
+						$('.popupBox').show();
+					} else {
+						$('.popupBox, .pbBoxJs').hide();
+					}
+					e.stopPropagation();
+				})
+				
+			})
+			
+			
+		</script>
+		
+        
+</body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="seli" />
+<meta name="keyword" content="seli" />
+<title>seli</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/animation.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+   	<!-- Head -->
+    	<header id="header">
+        	
+            <div class="clearfix relative">
+            	
+                <h1 class="headH1"><a href="index.html" class="logo">seli</a></h1>
+                
+                <div class="headInput"><input type="text" placeholder="search" class="boxSizing" /></div>
+                
+                <div class="clearfix headRight">
+                    <a href="javascript:;" class="search">screen</a>
+                    <a href="javascript:;" class="genre"><span></span></a>
+                    <a href="javascript:;" class="about"></a>
+                    <a href="javascript:;" class="user"></a>
+                </div>
+                
+            </div>
+            
+        </header>
+        
+    
+    <!-- content -->
+        <div class="mainBox">
+        
+            <div id="productList">
+                <div class="productBox productFixed"><a href="javascript:;" class="hotSaleBtn imgScale"><img src="img/img_1.jpg" width="296" class="transition_1" /></a></div>
+                <div class="productBox productFixed"><a href="javascript:;" class="newsBtn imgScale"><img src="img/img_2.jpg" width="296" class="transition_1" /></a></div>
+                <div class="productBox productFixed"><a href="javascript:;" class="brandBtn imgScale"><img src="img/img_28.jpg" width="296" class="transition_1" /></a></div>
+                <div class="productBox productFixed"><a href="javascript:;" class="imgScale"><img src="img/img_3.jpg" width="296" class="transition_1" /></a></div>
+                <div class="productBox productFixed"><a href="javascript:;" class="imgScale"><img src="img/img_3.jpg" width="296" class="transition_1" /></a></div>
+            </div>
+                
+			<script type="text/x-handlebars-template" id="waterfall-tpl">
+                {{#result}}
+                    <div class="productBox productList">
+                         <div class="productImg">
+                            <a href="{{url}}" class="imageBox"><img src="{{image}}" width="276" /></a>
+                            <a href="javascript:;" class="collection transition">
+								<span class="loveBox">
+									<span class="love"></span>
+									<span class="water"></span>
+								</span>
+							</a>
+                            <a href="javascript:;" class="enlarge transition" maxsrc="{{maximg}}"></a>
+                         </div>
+                         <div class="productText">
+                            <h3 class="fw"><a href="{{url}}">{{genre}}</a></h3>
+                            <h2><a href="{{url}}">{{title}}</a></h2>
+                        </div>
+                    </div>
+                {{/result}}
+            </script>
+            
+            <div id="waterfall-message"></div>
+            <div id="waterfall-loading"><img src="images/loading.gif" />加载中...</div>    
+            
+    	</div>
+    
+    
+    <!-- footer -->
+    	
+    	<footer id="footer">
+        	<p><a href="index.html" class="logo">seli</a></p>
+        	<span class="phone">86-021-6174-0635</span>
+        	<span class="mail">seli@top-line.net.cn</span>
+            <span>沪ICP备09001221号</span>
+            <span>沪公网安备11010802017116</span>
+        </footer>
+        
+        
+    <!-- 弹出框 -->
+    	<div class="popupBox">
+        
+        	<!-- 搜索 -->
+            	<div class="pbBoxJs pbSearch">
+                	<span class="spanjiao"></span>
+                    
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox">
+                            <form method="post">
+                            <ul class="pbSearchUl">
+                                <li>
+                                    <p>价格</p>
+                                    <div class="clearfix mt10">
+                                        <div class="divInput"><span>¥</span><input type="text" value="" class="boxSizing" /></div>
+                                        <span class="qujian"><img src="images/qujian.gif" /></span>
+                                        <div class="divInput"><span>¥</span><input type="text" value="" class="boxSizing" /></div>
+                                    </div>
+                                    <div class="selectDiv">
+                                        <select name="" class="select">
+                                            <option>All Prices</option>
+                                            <option>¥0.00—10.00</option>
+                                            <option>¥10.00—20.00</option>
+                                            <option>¥20.00—40.00</option>
+                                            <option>¥40.00—60.00</option>
+                                            <option>¥60.00—80.00</option>
+                                            <option>¥80.00—100.00</option>
+                                            <option>¥100.00以上</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>品牌</p>
+                                    <div class="selectDiv">
+                                        <select name="" class="select">
+                                            <option>All Brands</option>
+                                            <option>科颜氏</option>
+                                            <option>科莱丽</option>
+                                            <option>欧莱雅</option>
+                                            <option>碧欧泉</option>
+                                            <option>科莱丽</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>年份</p>
+                                    <div class="selectDiv">
+                                        <select name="" class="select">
+                                            <option>All Year</option>
+                                            <option>2017—2018</option>
+                                            <option>2016-2017</option>
+                                            <option>2015-2016</option>
+                                            <option>2014-2015</option>
+                                            <option>2013-2014</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="button" value="确定" class="pbSearchBtn" />
+                                    <p class="mt10 tc"><a href="javascript:;" class="resetBtn">清空筛选条件</a></p>
+                                </li>
+                            </ul>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            <!-- 分类 -->
+            	<div class="pbBoxJs pbGener">
+                	
+                    <span class="spanjiao"></span>
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox boxSizing">
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">家用电器</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">个护健康</a>
+                                    <a href="#">生活电器</a>
+                                    <a href="#">厨房小电</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">数码</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">智能设备</a>
+                                    <a href="#">影音娱乐</a>
+                                    <a href="#">手机配件</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">办公</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">文具耗材</a>
+                                    <a href="#">办公设备</a>
+                                    <a href="#">外设产品</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">配饰</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">麦子套装</a>
+                                    <a href="#">手套</a>
+                                    <a href="#">围巾</a>
+                                    <a href="#">钥匙扣</a>
+                                    <a href="#">袖口</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">箱包</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">功能箱包</a>
+                                    <a href="#">精品男包</a>
+                                    <a href="#">潮流女包</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">配件</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">配件</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">运动</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">户外装备</a>
+                                    <a href="#">健身训练</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">汽车用品</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">车载电器</a>
+                                    <a href="#">汽车装饰</a>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix pbGenerDl">
+                                <dt class="pbGenerDt"><a href="#">寝居服饰</a></dt>
+                                <dd class="clearfix pbGenerDd">
+                                    <a href="#">配件</a>
+                                </dd>
+                            </dl>
+                    	</div>
+                    </div>
+                    
+                </div>
+                
+            <!-- 个人中心 -->
+            	<div class="pbBoxJs pbUser">
+                	
+                    <span class="spanjiao"></span>
+                    
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox">
+                            <div class="userName">
+                                <div class="clearfix">
+                                    <div class="portrait"><img src="images/user_1.png" height="88" width="88" /></div>
+                                    <div class="userNameRight">
+                                        admin@loreal.com
+                                        <p><a href="javascript:;">Exit</a></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix userTab">
+                                    <a href="javascript:;" class="boxSizing current">足迹</a>
+                                    <a href="javascript:;" class="boxSizing">收藏</a>
+                                </div>
+                            </div>
+                        
+                        <!-- 足迹 -->
+                            <div class="userTabBox">
+                            
+                                <dl class="scrollDl">
+                                                            
+                                    <dt class="clearfix scrollDt">
+                                        <span>TODAY</span>
+                                        <a href="javascript:;" class="delete">清空</a>
+                                        <a href="javascript:;" class="sure">sure</a>
+                                    </dt>
+                                    
+                                    <dd class="scrollDd">
+                                        <ul>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" /></a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl class="scrollDl">
+                                                            
+                                    <dt class="clearfix scrollDt">
+                                        <span>HISTORY</span>
+                                        <a href="javascript:;" class="delete">清空</a>
+                                        <a href="javascript:;" class="sure">sure</a>
+                                    </dt>
+                                    
+                                    <dd class="scrollDd">
+                                        <ul>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_16.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                        </ul>
+                                    </dd>
+                                    
+                                </dl>
+                                
+                            </div>
+                        
+                        <!-- 收藏 -->
+                            <div class="userTabBox" style="display:none;">
+                            
+                                <dl class="scrollDl">
+                                                            
+                                    <dt class="clearfix scrollDt">
+                                        <span>COLLECT</span>
+                                        <a href="javascript:;" class="delete">清空</a>
+                                        <a href="javascript:;" class="sure">sure</a>
+                                    </dt>
+                                    
+                                    <dd class="scrollDd">
+                                        <ul>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_20.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_15.jpg" class="transition_1" /></a></li>
+                                            <li><a href="view.html" class="boxShadow"><img src="img/img_19.jpg" class="transition_1" /></a></li>
+                                        </ul>
+                                    </dd>
+                                    <dt class="listEnd">-END-</dt>
+                                </dl>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            <!-- 关于我们 -->
+            	<div class="pbBoxJs pbAbout">
+                	
+                    <span class="spanjiao"></span>
+                    
+                    <div class="pbScrollHidden">
+                    	<div class="pbsScrollBox boxSizing">
+                            <div class="pbAboutTitle clearfix">
+                                <span class="pbAboutTitleSpan">about seli</span>
+                                <div class="pbAboutBtn"><a href="#">Available</a><img src="images/erweima.gif" /></div>
+                            </div>
+                            
+                            <div class="pbAboutMessage">
+                                <p>上海思莉工贸有限公司是中国礼品服务的领导品牌，我们为众多世界级企业提供了礼品解决方案，为众多知名品牌量身定制创意礼品赠品，实现其品牌产品的营销增值，我们还广泛服务于奢侈品、航空、通讯、医药、IT、金融等行业客户。</p>
+                                <p>&nbsp;</p>
+                                <p>集团依托全球网点信息的共享、领先的设计理念、专业的全球采购团队，全力打造以创意设计、生产制造、品牌推广于一体的全方位礼品平台。</p>
+                            </div>
+                            
+                            <ul class="pbAboutAddress">
+                                <li class="address">上海市中山西路1265弄18号湘江大厦1505室</li>
+                                <li>Room 1505，Xiangjiang Building，No.18 Lane 1265，West Zhongshan Rd，Shanghai.</li>
+                            </ul>
+                            
+                            <ul class="pbAboutPhone">
+                                <li class="phoneIcon">86-021-6174-0635-601</li>
+                                <li class="mailIcon">seli@top-line.net.cn</li>
+                            </ul>
+                    	</div>
+                    </div>
+                    
+                
+                </div>
+            
+            <!-- 资讯 -->
+            	<div class="pbBoxJs pbNews">
+                	
+                    <div class="pbTitle">trends</div>
+                    
+                    <div class="pbNewsList">
+                    	<ul>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">巴黎印象：时尚 & 艺术</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">精彩回顾|对话意大利</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">时尚艺术馆</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">时尚馆</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">艺术馆</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">巴黎印象：时尚 & 艺术</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">精彩回顾|对话意大利</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        	<li>
+                            	<div class="clearfix relative">
+                                	<h2 class="pbNewsH2"><a href="newsView.html" target="_blank">精彩回顾|对话意大利</a></h2>
+                                	<span class="pbNewsTime">2018/05/28</span>
+                                </div>
+                            	<p class="pbNewsP">这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程这是一次奇妙的设计之旅主题“31度灰”石.尚艺术馆的确定其实是一个自然生长的过程</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="paging boxSizing">
+                    	<a href="javascript:;" title="上一页" class="pagingPrev"></a>
+                    	<a href="javascript:;" title="1" class="current">1</a>
+                    	<a href="javascript:;" title="2">2</a>
+                    	<a href="javascript:;" title="3">3</a>
+                    	<a href="javascript:;" title="4">4</a>
+                    	<span>...</span>
+                    	<a href="javascript:;" title="100">100</a>
+                    	<a href="javascript:;" title="下一页" class="pagingNext"></a>
+                    </div>
+                    
+                </div>
+            
+            <!-- 品牌 -->
+            	<div class="pbBoxJs pbBrand">
+                	
+                    <div class="pbTitle">brand</div>
+                    
+                    <div class="pbBrandList">
+                    	<ul class="clearfix">
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_22.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_23.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_24.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_23.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_24.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_22.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_22.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_23.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        	<li class="boxSizing"><a href="brandView.html" target="_blank"><img src="img/img_24.jpg" class="imgMiddle" /><span class="spanMiddle"></span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="paging boxSizing">
+                    	<a href="javascript:;" title="上一页" class="pagingPrev"></a>
+                    	<a href="javascript:;" title="1" class="current">1</a>
+                    	<a href="javascript:;" title="2">2</a>
+                    	<a href="javascript:;" title="3">3</a>
+                    	<a href="javascript:;" title="4">4</a>
+                    	<span>...</span>
+                    	<a href="javascript:;" title="100">100</a>
+                    	<a href="javascript:;" title="下一页" class="pagingNext"></a>
+                    </div>
+                    
+                </div>
+        
+        </div>
+        
+         <!-- 热销 -->
+        <div class="hotSaleMainBox">
+			<div class="hotSale">
+                <div class="pbScrollHidden">
+                	<div class="pbsScrollBox boxSizing">
+                        <!-- 图片轮播 -->
+                            <div class="swiper-container hotSaleImg">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="img/img_21.jpg" height="233" /></div>
+                                    <div class="swiper-slide"><img src="img/img_21.jpg" height="233" /></div>
+                                    <div class="swiper-slide"><img src="img/img_21.jpg" height="233" /></div>
+                                    <div class="swiper-slide"><img src="img/img_21.jpg" height="233" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        
+                        <!-- 列表 -->
+                            <div class="hotSaleList">
+                                <ul class="hotSaleUl">
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_4.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                  <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_5.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_6.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_7.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_8.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_9.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_10.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_11.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_12.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_13.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_14.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_15.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_16.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                    <li class="boxSizing">
+                                        <a href="javascript:;" class="collection transition">
+                                            <span class="loveBox">
+                                                <span class="love"></span>
+                                                <span class="water"></span>
+                                            </span>
+                                        </a>
+                                        <a href="view.html"><img src="img/img_17.jpg" /></a>
+                                        <h2 class="listTitle fw"><a href="view.html">手提包</a></h2>
+                                        <h3 class="listTitle"><a href="view.html">欧莱雅-002  DSC</a></h3>
+                                    </li>
+                                </ul>
+                                <p class="listEnd">-END-</p>
+                            </div>
+                	</div>
+                </div>
+             
+			</div>
+        </div>
+        
+        <!-- 大图 -->
+            <div class="maxImgBox">
+                <div class="listMaxImg">
+                    <img src="" />
+                </div>
+            </div>
+    
+    
+	<!-- Script -->
+        <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/handlebars.js"></script>
+        <script type="text/javascript" src="js/waterfall.js"></script>
+        <script type="text/javascript" src="js/fancySelect.js"></script>
+        <script>
+			
+			$(function(){
+				
+				$('#productList').waterfall({
+					itemCls: 'productBox',
+					colWidth: 296,  
+					gutterWidth: 10,
+					gutterHeight: 10,
+					minCol: 3,
+					maxCol: 5,
+					//maxPage: 5,
+					fitWidth: true,
+					checkImagesLoaded: false,
+					callbacks: {
+						
+						loadingFinished: function($loading, isBeyondMaxPage) {
+							if ( !isBeyondMaxPage ) {
+								$loading.hide();
+							} else {
+								$loading.hide();
+								$('#page-navigation').show();
+							}
+						},
+						renderData: function (data, dataType) {
+							var tpl,
+								template,
+								resultNum = data.total;
+								
+							if ( resultNum < 10) {
+								$('#productList').waterfall('pause', function() {
+									$('#waterfall-message').html('- END -')
+								});
+							}
+					
+							if ( dataType === 'json' ||  dataType === 'jsonp'  ) { // json or jsonp format
+								tpl = $('#waterfall-tpl').html();
+								template = Handlebars.compile(tpl);
+					
+								return template(data);
+							} else { // html format
+								return data;
+							}
+						}
+					},
+					path: function(page) {
+						return 'data/data' + page + '.json';
+					}
+				});
+				
+				//点击收藏
+				$('.collection').live("click", function(){
+					$(this).toggleClass('current');
+				})
+			
+				//select美化
+				$('.select').fancySelect();
+				
+				
+				//清空
+				$('.delete').click(function(){
+					$(this).siblings('.sure').toggle();
+				})
+				
+				//个人中心
+				$('.userTab > a').click(function(){ //足迹、收藏
+					index = $(this).index();
+					$(this).addClass('current').siblings().removeClass('current');
+					$('.userTabBox').eq(index).show().siblings('.userTabBox').hide();
+				})
+				
+				//热销
+				var bannerS = new Swiper('.hotSaleImg',{ //图片轮播
+					//effect : 'fade',
+					calculateHeight: true,
+					paginationClickable: true,
+					speed:1000,
+					slidesPerView:1,
+					loop:true,
+					pagination:{
+					  el: '.hotSaleImg .swiper-pagination',
+					  clickable: true,
+					},
+					autoplay:{
+						delay:5000,
+						disableOnInteraction: false,
+					}
+				})
+				$('.hotSaleImg').hover(function(){ //鼠标悬停停止动画
+					bannerS.autoplay.stop();
+				}, function(){
+					bannerS.autoplay.start();
+				})
+				
+				//大图
+				var sTopImg;
+				$('.enlarge').live("click", function(){ //点击小图出大图
+					sTopImg = $(window).scrollTop();
+					var imgSrc = $(this).attr('maxsrc');
+					$('.listMaxImg').children('img').attr( 'src', imgSrc+ '?t='+ Date.parse(new Date()) ); //写入大图路径
+					
+					
+					$('.maxImgBox').toggle(); //显示大图弹层
+					if( sTopImg+1700 >= $(document).height() ){  //判断点击的是否是最后一页图片
+						$('.listMaxImg').css({
+							'top' : 'auto',
+							'bottom' : 0
+							});
+					} else {
+						$('.listMaxImg').css( 'top', sTopImg );
+					}
+					$('.maxImgBox').height( $(document).height()-76 ); //设置大图弹层高度
+					$(window).scroll(function(){
+						$('.maxImgBox').height( $(document).height()-76 ); //设置大图弹层高度
+					})
+					$('.maxImgBox').click(function(){ //隐藏大图
+						$(this).hide();
+					})
+				})
+				
+				//搜索、分类、个人中心、关于我们、热销、资讯、品牌
+				$('.search').click(function(e){ //搜索
+					$('.pbSearch').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.hotSaleMainBox').css('visibility', 'hidden');
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.genre').click(function(e){ //分类
+					$('.pbGener').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.hotSaleMainBox').css('visibility', 'hidden');
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.user').click(function(e){ //个人中心
+					$('.pbUser').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.hotSaleMainBox').css('visibility', 'hidden');
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.about').click(function(e){ //关于我们
+					$('.pbAbout').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.hotSaleMainBox').css('visibility', 'hidden');
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.newsBtn').click(function(e){ //资讯
+					$('.pbNews').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.hotSaleMainBox').css('visibility', 'hidden');
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.brandBtn').click(function(e){ //品牌
+					$('.pbBrand').show().siblings('.pbBoxJs').hide();
+					$('.popupBox').show();
+					$('.hotSaleMainBox').css('visibility', 'hidden');
+					$('.maxImgBox').hide();
+					e.stopPropagation();
+				})
+				$('.hotSaleBtn').click(function(e){ //热销
+					$('.hotSaleMainBox').css('visibility', 'visible');
+					e.stopPropagation();
+				})
+				
+				$(document).bind("click touchend", function(e){ //点击任意处关闭注册弹层
+					if( $(e.target).closest('.pbBoxJs').length > 0 ){
+						$('.popupBox').show();
+					} else {
+						$('.popupBox, .pbBoxJs').hide();
+					}
+					if( $(e.target).closest('.hotSale').length > 0 ){
+						$('.hotSaleMainBox').css('visibility', 'visible');
+					}else {
+						$('.hotSaleMainBox').css('visibility', 'hidden');
+					}
+					e.stopPropagation();
+				})
+				
+			})
+			
+			
+		</script>
+		
+        
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* 缓动 */
+.transition{
+	-webkit-transition:all 0.5s linear;
+		-moz-transition:all 0.5s linear;
+			-o-transition:all 0.5s linear;
+				-ms-transition:all 0.5s linear;
+					transition:all 0.5s linear;
+	}
+.transition_1{
+	-webkit-transition:all 1s linear;
+		-moz-transition:all 1s linear;
+			-o-transition:all 1s linear;
+				-ms-transition:all 1s linear;
+					transition:all 1s linear;
+	}
+
+/* 爱心水纹 */
+@-webkit-keyframes water{
+	0%  {
+		-webkit-transform:rotateY(0deg);
+		-webkit-transform:rotateX(0deg);
+		-webkit-transform:rotate(0deg);
+		
+			-moz-transform:rotateY(0deg);
+			-moz-transform:rotateX(0deg);
+			-moz-transform:rotate(0deg);
+		
+				transform:rotateY(0deg);
+				transform:rotateX(0deg);
+				transform:rotate(0deg);
+		
+		top:18px;
+	}
+	50% {		
+		-webkit-transform:rotateY(180deg);
+		-webkit-transform:rotateX(180deg);
+		-webkit-transform:rotate(-180deg);
+		
+			-moz-transform:rotateY(180deg);
+			-moz-transform:rotateX(180deg);
+			-moz-transform:rotate(-180deg);
+		
+				transform:rotateY(180deg);
+				transform:rotateX(180deg);
+				transform:rotate(-180deg);
+		
+		top:0px;
+	}
+	100% {
+		top:18px;
+	}
+}
+
+/* 图片放大 */
+.imgScale{
+	display:block;
+	overflow:hidden;
+	position:relative;
+	height:100%;
+	width:100%;
+	}
+.imgScale:hover img{
+	-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+				-o-transform: scale(1.2);
+					transform: scale(1.2);
+	}
+	
+/* 遮盖层 */
+.boxShadow{
+	display:block;
+	overflow:hidden;
+	position:relative;
+	height:100%;
+	width:100%;
+	}
+.boxShadow:after{
+	content:" ";
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:8;
+	-webkit-transition:0 0 0 rgba(0,0,0,0.04) inset;
+		-moz-box-shadow:0 0 0 rgba(0,0,0,0.04) inset;
+			box-shadow:0 0 0 rgba(0,0,0,0.04) inset;
+	-webkit-transition:all 0.8s linear;
+		-moz-transition:all 0.8s linear;
+			transition:all 0.8s linear;
+	}
+.boxShadow:hover:after{
+	-webkit-transition:400px 0 0 rgba(0,0,0,0.08) inset;
+		-moz-box-shadow:400px 0 0 rgba(0,0,0,0.08) inset;
+			box-shadow:400px 0 0 rgba(0,0,0,0.08) inset;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

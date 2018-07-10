@@ -1,0 +1,75 @@
+{
+    "total": 10,
+    "result": [
+        {
+			"url": "view.html",
+            "image": "img/img_4.jpg",
+            "genre": "手提包",
+            "title": "帆布化妆包 DSC",
+            "maximg": "img/img_4_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_5.jpg",
+            "genre": "手提包",
+            "title": "手机支架-欧莱雅-001  DSC",
+            "maximg": "img/img_5_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_6.jpg",
+            "genre": "手提包",
+            "title": "明信片-科莱丽-001  DSC",
+            "maximg": "img/img_6_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_7.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅  DSC",
+            "maximg": "img/img_7_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_8.jpg",
+            "genre": "手提包",
+            "title": "颈部按摩器  DSC",
+            "maximg": "img/img_8_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_9.jpg",
+            "genre": "手提包",
+            "title": "欧莱雅-002  DSC",
+            "maximg": "img/img_9_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_10.jpg",
+            "genre": "手提包",
+            "title": "口红盒  DSC",
+            "maximg": "img/img_10_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_11.jpg",
+            "genre": "手提包",
+            "title": "DSC",
+            "maximg": "img/img_11_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_12.jpg",
+            "genre": "手提包",
+            "title": "帆布包-科莱丽-005",
+            "maximg": "img/img_12_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_13.jpg",
+            "genre": "手提包",
+            "title": "吹风机",
+            "maximg": "img/img_13_max.jpg"
+        }
+    ]
+}

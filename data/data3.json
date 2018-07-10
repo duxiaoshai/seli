@@ -1,0 +1,68 @@
+{
+    "total": 9,
+    "result": [
+        {
+			"url": "view.html",
+            "image": "img/img_7.jpg",
+            "genre": "手提包",
+            "title": "标题四",
+            "maximg": "img/img_7_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_8.jpg",
+            "genre": "手提包",
+            "title": "标题五",
+            "maximg": "img/img_8_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_9.jpg",
+            "genre": "手提包",
+            "title": "标题六",
+            "maximg": "img/img_9_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_10.jpg",
+            "genre": "手提包",
+            "title": "标题七",
+            "maximg": "img/img_10_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_11.jpg",
+            "genre": "手提包",
+            "title": "标题八",
+            "maximg": "img/img_11_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_12.jpg",
+            "genre": "手提包",
+            "title": "标题九",
+            "maximg": "img/img_12_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_13.jpg",
+            "genre": "手提包",
+            "title": "标题十",
+            "maximg": "img/img_13_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_14.jpg",
+            "genre": "手提包",
+            "title": "标题十一",
+            "maximg": "img/img_14_max.jpg"
+        },
+		{
+			"url": "view.html",
+            "image": "img/img_15.jpg",
+            "genre": "手提包",
+            "title": "标题十二",
+            "maximg": "img/img_15_max.jpg"
+        }
+    ]
+}
